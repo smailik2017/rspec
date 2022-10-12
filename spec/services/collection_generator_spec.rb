@@ -1,10 +1,9 @@
-require_relative '../../lib/services/collection_generator'
 
 RSpec.describe Services::CollectionGenerator do
-  context 'успешно выполняет' do
+  описание 'успешно выполняет' do
     let(:array_of_ten_elements) { Services::CollectionGenerator.call(1, 10) }
 
-    it 'генерацию массива из диапозона' do
+    тест 'генерацию массива из диапозона' do
       expect(array_of_ten_elements).to eq [*1..10]
     end
 
@@ -15,6 +14,11 @@ RSpec.describe Services::CollectionGenerator do
     it 'генерацию массива и число 100 в него не входит' do
       expect(array_of_ten_elements).not_to include 100
     end
+
+    it 'можно найти случайные значения из диапозона' do
+      expect(service_object 1..100).not_to include array_rand 1..10
+    end
+
   end
 
   context 'возбуждает ошибку' do
@@ -23,17 +27,17 @@ RSpec.describe Services::CollectionGenerator do
     end
   end
 
-  context 'при некорректных входных данных:' do
-    it 'строковые значения' do
-      pending 'По хорошему нужно пробовать привести к диапозону'
-      expect
-    end
+  # context 'при некорректных входных данных:' do
+  #   it 'строковые значения' do
+  #     pending 'По хорошему нужно пробовать привести к диапозону'
+  #     expect
+  #   end
     
-    xit 'массив' do
+  #   xit 'массив' do
 
-    end
+  #   end
 
-    it 'объект'
-  end
+  #   it 'объект'
+  # end
 
 end
