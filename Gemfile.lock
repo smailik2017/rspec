@@ -1,7 +1,17 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    activemodel (7.0.4)
+      activesupport (= 7.0.4)
+    activesupport (7.0.4)
+      concurrent-ruby (~> 1.0, >= 1.0.2)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
+    concurrent-ruby (1.1.10)
     diff-lcs (1.5.0)
+    i18n (1.12.0)
+      concurrent-ruby (~> 1.0)
     minitest (5.16.3)
     rspec (3.11.0)
       rspec-core (~> 3.11.0)
@@ -16,11 +26,14 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.11.0)
     rspec-support (3.11.1)
+    tzinfo (2.0.5)
+      concurrent-ruby (~> 1.0)
 
 PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  activemodel
   minitest
   rspec
 
