@@ -7,3 +7,4 @@ source "https://rubygems.org"
 gem 'rspec'
 gem 'minitest'
 gem 'activemodel', require: 'active_model'
+gem 'sinatra'
